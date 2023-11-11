@@ -236,6 +236,7 @@ namespace File_Accesso_Diretto
 
             try
             {
+                
                 int indice = ricercaindice(box_update.Text);
 
                 if (indice == -1)
@@ -244,11 +245,13 @@ namespace File_Accesso_Diretto
                     return;
                 }
 
+                string[] prodotto = ricercaprod(box_update.Text);
                 string line;
+
                 using (var file = new FileStream(filePath, FileMode.Open, FileAccess.Write))
                 {
                     file.Seek(riempi * indice, SeekOrigin.Begin);
-                    line = $"{box_modifica.Text};{box_modifica_prezzo.Text};1;0;".PadRight(riempi - 4) + "##";
+                    line = $"{box_modifica.Text};{prodotto[1]};{prodotto[2]};0;".PadRight(riempi - 4) + "##";
                     byte[] bytes = Encoding.UTF8.GetBytes(line);
                     file.Write(bytes, 0, bytes.Length);
                 }
@@ -379,7 +382,7 @@ namespace File_Accesso_Diretto
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Si è verificato un errore durante il recupero del prodotto: {ex.Message}.");
+                MessageBox.Show($"Si è verificato un errore durante il recupero del prodotto: {ex.Message}. ");
             }
 
         }
