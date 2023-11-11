@@ -379,7 +379,7 @@ namespace File_Accesso_Diretto
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Si è verificato un errore durante il recupero del prodotto: {ex.Message}");
+                MessageBox.Show($"Si è verificato un errore durante il recupero del prodotto: {ex.Message}.");
             }
 
         }
