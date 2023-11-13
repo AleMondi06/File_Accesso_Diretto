@@ -88,6 +88,7 @@ namespace File_Accesso_Diretto
             box_prezzo.Clear();
             sws.Close();
         }
+
         public int ricercaindice(string nome)
         {
             int riga = 0;
@@ -412,7 +413,7 @@ namespace File_Accesso_Diretto
             StreamWriter sw = new StreamWriter(file);
             sw.Write(string.Empty);
             sw.Close();
-            MessageBox.Show($"cancellazione eseguita.");
+            MessageBox.Show($"Cancellazione eseguita.");
         }
         private void EXIT_Click(object sender, EventArgs e)
         {

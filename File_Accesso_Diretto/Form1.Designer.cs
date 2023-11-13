@@ -228,7 +228,7 @@
             this.RECUPERA.Name = "RECUPERA";
             this.RECUPERA.Size = new System.Drawing.Size(90, 77);
             this.RECUPERA.TabIndex = 93;
-            this.RECUPERA.Text = "RECUPERA";
+            this.RECUPERA.Text = "RECOVER";
             this.RECUPERA.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.RECUPERA.UseVisualStyleBackColor = true;
             this.RECUPERA.Click += new System.EventHandler(this.RECUPERA_Click);
@@ -304,7 +304,7 @@
             this.DELETE_FILE.Name = "DELETE_FILE";
             this.DELETE_FILE.Size = new System.Drawing.Size(158, 64);
             this.DELETE_FILE.TabIndex = 105;
-            this.DELETE_FILE.Text = "DELETE FILE ";
+            this.DELETE_FILE.Text = "EMPTY FILE ";
             this.DELETE_FILE.UseVisualStyleBackColor = true;
             this.DELETE_FILE.Click += new System.EventHandler(this.DELETE_FILE_Click);
             // 
