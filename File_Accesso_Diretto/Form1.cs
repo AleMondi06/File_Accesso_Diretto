@@ -121,7 +121,7 @@ namespace File_Accesso_Diretto
                     riga++;
                 }
             }
-            return -1;
+            return -1;      
         }
 
         // Metodo per cercare le informazioni di un prodotto nel file
@@ -307,6 +307,7 @@ namespace File_Accesso_Diretto
 
 
         }
+        private bool logicalDeleteUsed = false;
 
         private void DELETE_LOGIC_Click(object sender, EventArgs e)
         {
@@ -352,6 +353,7 @@ namespace File_Accesso_Diretto
 
                 // Messaggio di successo dopo la cancellazione
                 MessageBox.Show("Cancellazione completata con successo.");
+                logicalDeleteUsed = true;
             }
             catch (Exception ex)
             {
@@ -376,8 +378,10 @@ namespace File_Accesso_Diretto
             }
             try
             {
-                // Ricerca dell'indice del prodotto da cancellare
-                int indice = RicercaIndice(box_cancella.Text);
+                int indice = logicalDeleteUsed ? RicercaIndiceRecuperare(box_cancella.Text) : RicercaIndice(box_cancella.Text);
+
+                // Resetta il controllo
+                logicalDeleteUsed = false;
 
                 // Se il prodotto non viene trovato, mostra un messaggio e interrompe l'esecuzione
                 if (indice == -1)
