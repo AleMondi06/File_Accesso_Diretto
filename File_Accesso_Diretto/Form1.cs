@@ -493,7 +493,7 @@ namespace File_Accesso_Diretto
             // Se il prodotto non viene trovato, mostra un messaggio, altrimenti mostra la posizione del prodotto
             if (trovato == -1)
             {
-                MessageBox.Show("Il prodotto non è stato trovato");
+                MessageBox.Show("Il prodotto non è stato trovato / è stato cancellato.");
             }
             else
             {
