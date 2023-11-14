@@ -533,8 +533,12 @@ namespace File_Accesso_Diretto
         }
         private void EXIT_Click(object sender, EventArgs e)
         {
-            // Chiusura della applicazione
-            Application.Exit();
+            // Chiusura della applicazione con conferma
+            DialogResult conferma = MessageBox.Show("Sei sicuro di voler uscire dal programma?", "Esci", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (conferma == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
